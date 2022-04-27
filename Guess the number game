@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+int number,guess,nguesses=1;
+srand(time(0));
+number=rand()%20+1;
+//printf("the number is %d\n",number);
+do
+{
+printf("enter guess between 0 to 20\n");
+
+scanf("%d",&guess);
+if(guess>number)
+{
+printf("lower value please\n");
+}
+else if(guess<number)
+{
+printf("higher number please!\n");
+}
+else
+{
+printf("you guessed in %d\n",nguesses);
+}
+nguesses++;
+}
+while(guess!=number);
+return 0;
+}
+    
